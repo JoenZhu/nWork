@@ -3,11 +3,19 @@
 	<meta charset='UTF-8' />
 	<title>the canvas countdown</title>
 	<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' />
+	<style>
+	    canvas{border:1px solid #e4e4e4; margin: 0 auto;}
+	</style>
 </head>
 <body>
 	<canvas id="myCan">
 	</canvas>
-	<script type="text/javascript" src='./js/model.js'></script>
-	<script type="text/javascript" src='./js/main.js'></script>
+
+	<script src="./js/sea.js" id="seajsnode"></script>
+	<script>
+	    seajs.use('main', function (main) {
+	    	new main('myCan') ;
+	    })
+	</script>
 </body>
 </html>
